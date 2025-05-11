@@ -3,11 +3,13 @@ version: "3.8"
 services:
   frontend:
     build: .
-    image: zebi/myapp:latest # Replace with your Docker Hub details
+    image: ru0300usman/myapp3:latest # Replace with your Docker Hub details
     ports:
       - "3000:80"
     depends_on:
       - db
+    volumes:
+      - my_new_volume:/app/new_data # Mount the new volume to a path in the frontend container
 
   db:
     image: postgres:13-alpine # Or your preferred database image
@@ -16,7 +18,8 @@ services:
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: mydb1
     volumes:
-      - db_data12:/var/lib/postgresql/data/
+      - db_data:/var/lib/postgresql/data/
 
 volumes:
-  db_data12:
+  db_data:
+  my_new_volume: # Definition of the new volume
