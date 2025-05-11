@@ -18,8 +18,7 @@ services:
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: mydb1
     volumes:
-      - db_data:/var/lib/postgresql/data/
+      - my_new_volume
 
 volumes:
-  db_data:
   my_new_volume: # Definition of the new volume
