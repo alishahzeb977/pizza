@@ -7,11 +7,11 @@ services:
     ports:
       - "3000:80"
     depends_on:
-      - db
+      - abc
     volumes:
       - my_new_volume:/app/new_data # Mount the new volume to a path in the frontend container
 
-  db:
+  abc:
     image: postgres:13-alpine # Or your preferred database image
     environment:
       POSTGRES_USER: usman
@@ -21,4 +21,4 @@ services:
       - my_new_volume
 
 volumes:
-  my_new_volume: # Definition of the new volume
+  abc: # Definition of the new volume
