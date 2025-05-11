@@ -16,7 +16,7 @@ services:
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: mydb1
     volumes:
-      - db_data:/var/lib/postgresql/data/
+      - db_data12:/var/lib/postgresql/data/
 
 volumes:
   db_data12:
