@@ -18,7 +18,7 @@ pipeline {
         
         stage('Fetch code ') {
             steps {
-                sh 'git https://github.com/alishahzeb977/pizza.git /var/lib/jenkins/DevOps/php/'
+                sh 'git clone https://github.com/alishahzeb977/pizza.git /var/lib/jenkins/DevOps/php/'
             }
         }
 
